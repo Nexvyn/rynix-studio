@@ -9,7 +9,7 @@ export default function LandingPage() {
     <div className={`min-h-screen bg-background ${GeistSans.className}`}>
       <nav className="flex items-center justify-between px-8 py-6 max-w-6xl mx-auto">
         <div className={`text-lg font-medium tracking-tight text-foreground ${GeistPixelSquare.className}`}>
-          {'>'} Studio
+          {'>'} Rynix Studio
         </div>
         <div className="flex items-center gap-8">
           <Link
@@ -28,7 +28,7 @@ export default function LandingPage() {
         <div className="max-w-2xl">
           <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-xs mb-6 ${GeistPixelSquare.className}`}>
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            ASCII STUDIO v1.0
+            Rynix Studio v1.0
           </div>
           <h1 className="text-4xl sm:text-5xl font-medium tracking-tight text-foreground leading-[1.1]">
             A clean space for your ideas
