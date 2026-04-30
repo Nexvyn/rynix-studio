@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -137,4 +139,14 @@
   display: none !important;
   width: 0 !important;
   height: 0 !important;
+}
+
+:root {
+  --font-instrument-serif: "Instrument Serif", serif;
+  --font-retrogression: "retrogression", "Instrument Serif", serif;
+}
+
+::selection {
+  color: #fff;
+  background: #ff2d87;
 }
