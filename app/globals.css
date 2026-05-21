@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+/* ARIA: Focus rings for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+button:focus-visible, [role="button"]:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -51,6 +66,7 @@
 }
 
 :root {
+  --tree-filter: none;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -86,6 +102,7 @@
 }
 
 .dark {
+  --tree-filter: brightness(1.8) saturate(0.7);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -129,7 +146,129 @@
   html {
     @apply font-sans;
   }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  select,
+  kbd,
+  svg,
+  img,
+  [role="button"],
+  [role="tab"],
+  [role="slider"],
+  [role="switch"],
+  [role="menuitem"],
+  [role="option"] {
+    user-select: none;
+    -webkit-user-select: none;
+  }
 }
+
+/* Checker pattern variables for color picker alpha backgrounds */
+:root {
+  --checker-a: #c8c8c8;
+  --checker-b: #f0f0f0;
+}
+.dark, body[data-theme="dark"] {
+  --checker-a: #3a3a3a;
+  --checker-b: #555555;
+}
+
+/* Surface elevation system for fluid-select and other elevated components */
+.bg-surface-1 { background-color: #1c1c1c; }
+.bg-surface-2 { background-color: #222222; }
+.bg-surface-3 { background-color: #272727; }
+.bg-surface-4 { background-color: #2c2c2c; }
+.bg-surface-5 { background-color: #313131; }
+.bg-surface-6 { background-color: #363636; }
+.bg-surface-7 { background-color: #3b3b3b; }
+.bg-surface-8 { background-color: #404040; }
+
+.shadow-surface-1 { box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+.shadow-surface-2 { box-shadow: 0 2px 6px rgba(0,0,0,0.35); }
+.shadow-surface-3 { box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+.shadow-surface-4 { box-shadow: 0 6px 16px rgba(0,0,0,0.45); }
+.shadow-surface-5 { box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+.shadow-surface-6 { box-shadow: 0 10px 24px rgba(0,0,0,0.55); }
+.shadow-surface-7 { box-shadow: 0 12px 28px rgba(0,0,0,0.6); }
+.shadow-surface-8 { box-shadow: 0 16px 32px rgba(0,0,0,0.65); }
+
+/* Light mode surface overrides */
+:root:not(.dark) .bg-surface-1,
+.light .bg-surface-1 { background-color: #ffffff; }
+:root:not(.dark) .bg-surface-2,
+.light .bg-surface-2 { background-color: #f8f8f8; }
+:root:not(.dark) .bg-surface-3,
+.light .bg-surface-3 { background-color: #f2f2f2; }
+:root:not(.dark) .bg-surface-4,
+.light .bg-surface-4 { background-color: #ececec; }
+:root:not(.dark) .bg-surface-5,
+.light .bg-surface-5 { background-color: #e8e8e8; }
+:root:not(.dark) .bg-surface-6,
+.light .bg-surface-6 { background-color: #e2e2e2; }
+:root:not(.dark) .bg-surface-7,
+.light .bg-surface-7 { background-color: #dcdcdc; }
+:root:not(.dark) .bg-surface-8,
+.light .bg-surface-8 { background-color: #d6d6d6; }
+
+/* ── Shadcn Select – dark theme (default) ── */
+.select-trigger {
+  background-color: #2a2a2a;
+  border: 1px solid #2b2b2b;
+  color: #ececec;
+}
+.select-trigger:hover { background-color: #303030; }
+.select-trigger-icon  { color: #8b8b8b; }
+
+.select-content {
+  background-color: #242424;
+  border: 1px solid #2b2b2b;
+  color: #ececec;
+  padding: 4px;
+}
+.select-inner {
+  background-color: #1c1c1c;
+  border: 1px solid rgba(43, 43, 43, 0.38);
+  border-radius: 8px;
+}
+.select-item                    { color: #c8c8c8; }
+.select-item[data-highlighted]  { color: #ffffff; }
+.select-item[data-state="checked"] { color: #ffffff; }
+.select-highlight               { background-color: #2a2a2a; }
+.select-label                   { color: #6b6b6b; }
+.select-scroll-btn              { color: #8b8b8b; }
+.select-separator               { background-color: #2b2b2b; }
+
+/* ── Light mode — scoped to .theme-light wrapper on editor shell ── */
+.theme-light .select-trigger {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  color: #1a1a1a;
+}
+.theme-light .select-trigger:hover { background-color: #f5f5f5; }
+.theme-light .select-trigger-icon  { color: #6b6b6b; }
+
+/* Portal content renders into <body>, so we use a body attribute set dynamically */
+body[data-theme="light"] .select-content {
+  background-color: #f2f2f2;
+  border: 1px solid #e8e8e8;
+  color: #1a1a1a;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+body[data-theme="light"] .select-inner {
+  background-color: #ffffff;
+  border: 1px solid rgba(232, 232, 232, 0.38);
+  border-radius: 8px;
+}
+body[data-theme="light"] .select-item                    { color: #3a3a3a; }
+body[data-theme="light"] .select-item[data-highlighted]  { color: #0a0a0a; }
+body[data-theme="light"] .select-item[data-state="checked"] { color: #0a0a0a; }
+body[data-theme="light"] .select-highlight               { background-color: #f0f0f0; }
+body[data-theme="light"] .select-label                   { color: #9a9a9a; }
+body[data-theme="light"] .select-scroll-btn              { color: #6b6b6b; }
+body[data-theme="light"] .select-separator               { background-color: #e8e8e8; }
 
 .scrollbar-hide {
   -ms-overflow-style: none !important;
@@ -144,6 +283,10 @@
 :root {
   --font-instrument-serif: "Instrument Serif", serif;
   --font-retrogression: "retrogression", "Instrument Serif", serif;
+  --brand-accent: #7eb8bc;
+}
+.dark {
+  --brand-accent: #7eb8bc;
 }
 
 ::selection {
