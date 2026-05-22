@@ -1,0 +1,26 @@
+# Rynix Studio
+
+> Real-time creative visual effects editor with 18+ rendering modes
+
+## Overview
+Browser-based creative tool for ASCII art, dot effects, shader rendering, glyph processing, and video effects. All processing runs client-side.
+
+## Docs
+- [README](./README.md): Setup, scripts, environment variables
+- [ARCHITECTURE](./ARCHITECTURE.md): System design, render pipeline, state management
+- [Context](./Context.md): AI-friendly project summary
+
+## Routes
+- / : Landing page
+- /edit : Main editor
+- /privacy : Privacy policy
+- /pricing : Pricing page
+- /product : Product overview
+
+## Key Features
+- 18 rendering modes (ASCII, dots, tonekit, blur, glyph, scanline, crystal-edge, etc.)
+- Webcam, video, and image input
+- 20+ export formats
+- Physics-based particle systems
+- Real-time shader effects
+- Deterministic frame recording for export
