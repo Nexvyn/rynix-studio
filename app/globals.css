@@ -289,7 +289,36 @@ body[data-theme="light"] .select-separator               { background-color: #e8
   --brand-accent: #7eb8bc;
 }
 
-::selection {
-  color: #fff;
-  background: #ff2d87;
+@media (max-width: 820px) {
+  .sidebar-actions-container {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .sidebar-actions-container > div,
+  .sidebar-actions-container > form {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 1 auto !important;
+  }
+  .export-btn-mobile,
+  .feedback-btn-mobile {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    height: 40px !important;
+  }
+  .export-btn-mobile button,
+  .feedback-btn-mobile button {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    flex: none !important;
+  }
 }
