@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useId } from "react";
+import { useState, useEffect, useId } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Logo } from "@/components/ui/logo";
@@ -27,7 +27,13 @@ export function BrandLogo({
   const [internalHovered, setInternalHovered] = useState(false);
   const hovered = controlledHovered !== undefined ? controlledHovered : internalHovered;
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = mounted && resolvedTheme !== "light";
   const uid = useId().replace(/:/g, "");
 
   const gradId = `bl-grad-${uid}`;
@@ -36,7 +42,7 @@ export function BrandLogo({
   const gridStyle =
     typeof size === "number"
       ? { left: -size, top: -size, width: size * 3, height: size * 3 }
-      : { left: `-${size}`, top: `-${size}`, width: `calc(${size} * 3)`, height: `calc(${size} * 3)` };
+      : { left: `calc(${size} * -1)`, top: `calc(${size} * -1)`, width: `calc(${size} * 3)`, height: `calc(${size} * 3)` };
 
   return (
     <div
@@ -56,15 +62,15 @@ export function BrandLogo({
           <svg width="100%" height="100%" viewBox="0 0 300 300">
             <defs>
               <radialGradient id={gradId} cx="50%" cy="50%" r="50%">
-                <stop offset="30%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="90%" stopColor="#000000" stopOpacity="1" />
+                <stop offset="40%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="100%" stopColor="#000000" stopOpacity="1" />
               </radialGradient>
               <mask id={maskId}>
                 <rect width="300" height="300" fill={`url(#${gradId})`} />
               </mask>
             </defs>
             <g
-              stroke={isDark ? "rgba(255,255,255,0.28)" : "rgba(0,0,0,0.16)"}
+              stroke={isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.3)"}
               strokeWidth="1.5"
               mask={`url(#${maskId})`}
             >
