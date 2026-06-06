@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { fadeUp, inViewport, STAGGER } from "@/lib/motion";
+import { ctaButtonClassName } from "@/components/ui/cta-button-style";
 
 type Tier = {
   name: string;
@@ -65,6 +66,46 @@ const tiers: Tier[] = [
   },
 ];
 
+function PriceBand({
+  price,
+  annual,
+  bandClass,
+  mutedClass,
+  frameClass,
+  innerBorderClass,
+  dark,
+}: {
+  price: number;
+  annual: boolean;
+  bandClass: string;
+  mutedClass: string;
+  frameClass: string;
+  innerBorderClass: string;
+  dark: boolean;
+}) {
+  return (
+    <div className={`rounded-[24px] border p-1.5 ${frameClass}`}>
+      <div className={`relative overflow-hidden rounded-[18px] border ${innerBorderClass} px-6 py-4 ${bandClass}`}>
+        {!dark && (
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-0 select-none bg-[url(/dot-grid-pattern.svg)] bg-[length:24px_24px] bg-repeat opacity-60 dark:invert"
+          />
+        )}
+        <div className="relative">
+          <span className={`text-[11px] font-semibold uppercase tracking-wide ${mutedClass}`}>
+            {price === 0 ? "Forever" : annual ? "Per month, billed yearly" : "Per month"}
+          </span>
+          <div className="mt-1.5 text-3xl font-semibold tracking-tight tabular-nums">
+            ${price}
+            <span className={`ml-1 text-base font-normal ${mutedClass}`}>/mo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Pricing() {
   const [annual, setAnnual] = useState(false);
 
@@ -98,9 +139,22 @@ export function Pricing() {
           })}
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3">
           {tiers.map((tier, i) => {
             const price = annual ? tier.annual : tier.monthly;
+            const dark = tier.name === "Team";
+            const bandClass = tier.featured
+              ? "bg-accent text-foreground"
+              : "bg-card text-foreground";
+            const bodyClass = dark
+              ? "bg-foreground text-background"
+              : tier.featured
+              ? "bg-accent text-foreground"
+              : "bg-card text-foreground";
+            const mutedClass = dark ? "text-background/55" : "text-muted-foreground";
+            const frameClass = "border-border/65 bg-muted/40";
+            const innerBorderClass = "border-border";
+
             return (
               <motion.div
                 key={tier.name}
@@ -109,58 +163,66 @@ export function Pricing() {
                 whileInView="visible"
                 viewport={inViewport}
                 transition={{ delay: i * STAGGER.item }}
-                className={
-                  tier.featured
-                    ? "rounded-2xl border border-border bg-muted/90 p-1"
-                    : "rounded-2xl border border-border bg-background"
-                }
+                className="flex flex-col gap-1.5"
               >
-                <div
-                  className={
-                    tier.featured
-                      ? "h-full rounded-xl bg-card p-7 shadow-[0_0_0_1px_rgba(0,0,0,0.04)] dark:shadow-[0_0_0_1px_rgba(255,255,255,0.06)]"
-                      : "h-full p-7"
-                  }
-                >
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-foreground">{tier.name}</h3>
-                    {tier.featured && (
-                      <span className="rounded-full bg-foreground px-2 py-0.5 text-[10px] font-medium text-background">
-                        Most popular
-                      </span>
-                    )}
-                  </div>
+                <PriceBand
+                  price={price}
+                  annual={annual}
+                  bandClass={bandClass}
+                  mutedClass="text-muted-foreground"
+                  frameClass="border-border/65 bg-muted/40"
+                  innerBorderClass="border-border"
+                  dark={false}
+                />
 
-                  <div className="mt-4 flex items-baseline gap-1.5">
-                    <span className="text-4xl font-medium tracking-tight text-foreground tabular-nums">
-                      ${price}
+                <div className={`flex flex-1 rounded-[24px] border p-1.5 ${frameClass}`}>
+                  <div className={`relative flex flex-1 flex-col overflow-hidden rounded-[18px] border ${innerBorderClass} px-6 pt-5 pb-6 ${bodyClass}`}>
+                    <span
+                      aria-hidden
+                      className={`pointer-events-none absolute inset-0 select-none bg-current [mask-image:url(/squiggle-pattern.svg)] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover] ${
+                        dark ? "text-background/[0.06]" : "text-foreground/[0.05]"
+                      }`}
+                    />
+                    <span className={`text-[11px] font-medium uppercase tracking-wide ${mutedClass}`}>
+                      Plan
                     </span>
-                    <span className="text-sm text-muted-foreground">
-                      {price === 0 ? "forever" : annual ? "per month, billed yearly" : "per month"}
-                    </span>
+
+                    <div className="relative mt-8 mb-6">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xl font-semibold tracking-tight">{tier.name}</h3>
+                      {tier.featured && (
+                        <span className="rounded-full bg-foreground px-2 py-0.5 text-[10px] font-medium text-background">
+                          Most popular
+                        </span>
+                      )}
+                    </div>
+
+                    <ul className="mt-3 space-y-2">
+                      {tier.features.map((feature) => (
+                        <li key={feature} className={`flex items-start gap-2 text-[13px] leading-snug ${mutedClass}`}>
+                          <Check size={14} className="mt-0.5 shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    </div>
+
+                    <Link
+                      href={tier.href}
+                      className={`${ctaButtonClassName} mt-auto w-full px-5 py-2.5 text-sm ${dark ? "!bg-white !text-[#0a0a0b]" : ""}`}
+                      style={
+                        dark
+                          ? { color: "#0a0a0b", background: "#ffffff", boxShadow: "0 2px 4px rgba(0,0,0,0.5)" }
+                          : {
+                              color: "var(--background)",
+                              background: "var(--foreground)",
+                              boxShadow: "0 0 0 1.5px rgba(126,184,188,0.5), 0 2px 4px rgba(0,0,0,0.4)",
+                            }
+                      }
+                    >
+                      {tier.cta}
+                    </Link>
                   </div>
-
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{tier.description}</p>
-
-                  <Link
-                    href={tier.href}
-                    className={
-                      tier.featured
-                        ? "mt-6 flex w-full items-center justify-center rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background shadow-sm transition-[background-color,scale] duration-150 ease-out hover:bg-foreground/90 active:scale-[0.96]"
-                        : "mt-6 flex w-full items-center justify-center rounded-md border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-[opacity,scale] duration-150 ease-out hover:opacity-85 active:scale-[0.96]"
-                    }
-                  >
-                    {tier.cta}
-                  </Link>
-
-                  <ul className="mt-7 space-y-3">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                        <Check size={15} className="mt-0.5 shrink-0 text-foreground" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </motion.div>
             );
