@@ -4,8 +4,8 @@ export function GithubDoodle() {
   return (
     <svg
       width="48"
-      height="26"
-      viewBox="0 -10 640 180"
+      height="32"
+      viewBox="0 -10 640 240"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={{ overflow: "visible" }}
