@@ -322,3 +322,19 @@ body[data-theme="light"] .select-separator               { background-color: #e8
     flex: none !important;
   }
 }
+
+@keyframes gallery-video-pan {
+  from { background-position: 0% 0; }
+  to { background-position: 220% 0; }
+}
+
+@keyframes footer-rain-drop {
+  0% { transform: translateY(0); opacity: 0; }
+  12% { opacity: 0.75; }
+  85% { opacity: 0.75; }
+  100% { transform: translateY(var(--rain-distance, 90px)); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-rain-drop { animation: none !important; opacity: 0; }
+}

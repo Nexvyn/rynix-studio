@@ -1,15 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
-import { Borel } from "next/font/google";
+import { Borel, Playwrite_TZ } from "next/font/google";
 import { Agentation } from "agentation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ServiceWorkerRegister } from "./sw-register";
 import { PageTransitionProvider } from "@/components/ui/page-transition";
+import { GlimmProvider, InterceptLinks } from "glimm/next";
 import "./globals.css";
 
 const borel = Borel({ subsets: ["latin"], variable: "--font-borel", weight: "400" });
+const playwriteTZ = Playwrite_TZ({ variable: "--font-playwrite", weight: "400", display: "optional" });
 
 
 const BASE_URL = "https://rynix.studio";
@@ -72,6 +74,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
@@ -86,7 +90,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistMono.variable} ${borel.variable} h-full antialiased dark scrollbar-hide`}
+      className={`${GeistMono.variable} ${borel.variable} ${playwriteTZ.variable} h-full antialiased dark scrollbar-hide`}
       style={{ fontFamily: `${GeistMono.style.fontFamily}, monospace` }}
       suppressHydrationWarning
     >
@@ -97,9 +101,12 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <PageTransitionProvider>
-            {children}
-          </PageTransitionProvider>
+          <GlimmProvider palette="prism">
+            <InterceptLinks />
+            <PageTransitionProvider>
+              {children}
+            </PageTransitionProvider>
+          </GlimmProvider>
         </ThemeProvider>
         <ServiceWorkerRegister />
         <Analytics />
