@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="blueCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="heroCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7a45"/>
+      <stop offset="100%" stop-color="#e8364f"/>
+    </linearGradient>
+    <linearGradient id="purpleCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="silverCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5e7eb"/>
+      <stop offset="100%" stop-color="#9ca3af"/>
+    </linearGradient>
+    <clipPath id="cardClip"><rect x="0" y="36" width="220" height="244" rx="0"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Logo + headline -->
+  <g transform="translate(600, 118)">
+    <g transform="translate(-16, -52) scale(1.1)">
+      <path fill="#7eb8bc" d="M7.25 16.0996C8.47968 16.1917 9.41168 16.3691 10.2373 16.7109C12.5242 17.6582 14.3418 19.4758 15.2891 21.7627C15.6308 22.5881 15.8073 23.5199 15.8994 24.749C15.8544 25.0446 15.7917 25.2975 15.6953 25.5303C15.2893 26.5104 14.5104 27.2893 13.5303 27.6953C12.7952 27.9997 11.8635 28 10 28C8.1365 28 7.20476 27.9997 6.46973 27.6953C5.48961 27.2893 4.71066 26.5104 4.30469 25.5303C4.00034 24.7952 4 23.8635 4 22C4 20.1365 4.00034 19.2048 4.30469 18.4697C4.71066 17.4896 5.48961 16.7107 6.46973 16.3047C6.70228 16.2084 6.95476 16.1446 7.25 16.0996Z"/>
+      <path fill="#7eb8bc" d="M24.749 16.0996C25.0447 16.1446 25.2975 16.2083 25.5303 16.3047C26.5104 16.7107 27.2893 17.4896 27.6953 18.4697C27.9997 19.2048 28 20.1365 28 22C28 23.8635 27.9997 24.7952 27.6953 25.5303C27.2893 26.5104 26.5104 27.2893 25.5303 27.6953C24.7952 27.9997 23.8635 28 22 28C20.1365 28 19.2048 27.9997 18.4697 27.6953C17.4896 27.2893 16.7107 26.5104 16.3047 25.5303C16.2083 25.2975 16.1446 25.0447 16.0996 24.749C16.1918 23.5198 16.3692 22.5881 16.7109 21.7627C17.6582 19.4758 19.4758 17.6582 21.7627 16.7109C22.5881 16.3692 23.5198 16.1918 24.749 16.0996Z"/>
+      <path fill="#7eb8bc" d="M10 4C11.8635 4 12.7952 4.00034 13.5303 4.30469C14.5104 4.71066 15.2893 5.48961 15.6953 6.46973C15.7916 6.70224 15.8544 6.95483 15.8994 7.25C15.8073 8.47965 15.6309 9.4117 15.2891 10.2373C14.3418 12.5242 12.5242 14.3418 10.2373 15.2891C9.4117 15.6309 8.47965 15.8073 7.25 15.8994C6.95483 15.8544 6.70224 15.7916 6.46973 15.6953C5.48961 15.2893 4.71066 14.5104 4.30469 13.5303C4.00034 12.7952 4 11.8635 4 10C4 8.1365 4.00034 7.20476 4.30469 6.46973C4.71066 5.48961 5.48961 4.71066 6.46973 4.30469C7.20476 4.00034 8.1365 4 10 4Z"/>
+      <path fill="#7eb8bc" d="M22 4C23.8635 4 24.7952 4.00034 25.5303 4.30469C26.5104 4.71066 27.2893 5.48961 27.6953 6.46973C27.9997 7.20476 28 8.1365 28 10C28 11.8635 27.9997 12.7952 27.6953 13.5303C27.2893 14.5104 26.5104 15.2893 25.5303 15.6953C25.2975 15.7917 25.0446 15.8544 24.749 15.8994C23.5199 15.8073 22.5881 15.6308 21.7627 15.2891C19.4758 14.3418 17.6582 12.5242 16.7109 10.2373C16.3691 9.41168 16.1917 8.47968 16.0996 7.25C16.1446 6.95476 16.2084 6.70228 16.3047 6.46973C16.7107 5.48961 17.4896 4.71066 18.4697 4.30469C19.2048 4.00034 20.1365 4 22 4Z"/>
+    </g>
+    <text text-anchor="middle" y="8" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.2">A creative suite for images</text>
+    <text text-anchor="middle" y="52" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.2">and motion graphics.</text>
+    <text text-anchor="middle" y="92" fill="#9ca3af" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="500">All on-device. All in your browser.</text>
+  </g>
+
+  <!-- CARD 1: Blur Suite -->
+  <g transform="translate(48, 300) rotate(-14 110 140)" filter="url(#softShadow)">
+    <rect width="220" height="280" rx="16" fill="url(#blueCard)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.55)"/>
+    <circle cx="28" cy="28" r="5" fill="#7eb8bc"/>
+    <text x="42" y="32" fill="#111827" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">Blur Suite</text>
+    <rect x="18" y="54" width="184" height="206" rx="10" fill="#1e293b"/>
+    <ellipse cx="110" cy="120" rx="52" ry="62" fill="#64748b"/>
+    <ellipse cx="110" cy="120" rx="52" ry="62" fill="none" stroke="#94a3b8" stroke-width="18" opacity="0.35"/>
+    <ellipse cx="110" cy="120" rx="52" ry="62" fill="none" stroke="#cbd5e1" stroke-width="28" opacity="0.18"/>
+  </g>
+
+  <!-- CARD 2: Crystal Edge -->
+  <g transform="translate(178, 318) rotate(-7 110 140)" filter="url(#softShadow)">
+    <rect width="220" height="280" rx="16" fill="#2a2a2a" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="28" cy="28" r="5" fill="#7eb8bc"/>
+    <text x="42" y="32" fill="#e5e7eb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">Crystal Edge</text>
+    <rect x="18" y="54" width="184" height="206" rx="10" fill="#111827"/>
+    <polygon points="70,210 95,120 120,170 145,95 170,210" fill="none" stroke="#7eb8bc" stroke-width="2"/>
+    <polygon points="80,210 100,140 125,180 150,110 165,210" fill="rgba(126,184,188,0.15)"/>
+    <circle cx="125" cy="130" r="28" fill="rgba(126,184,188,0.25)"/>
+  </g>
+
+  <!-- CARD 3: Video Export -->
+  <g transform="translate(318, 328) rotate(-2 110 140)" filter="url(#softShadow)">
+    <rect width="220" height="280" rx="16" fill="url(#silverCard)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.45)"/>
+    <circle cx="28" cy="28" r="5" fill="#7eb8bc"/>
+    <text x="42" y="32" fill="#111827" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">Video Export</text>
+    <rect x="52" y="72" width="116" height="196" rx="18" fill="#1f2937" stroke="#6b7280" stroke-width="3"/>
+    <rect x="62" y="84" width="96" height="150" rx="4" fill="#0f172a"/>
+    <circle cx="110" cy="92" r="5" fill="#111827"/>
+    <rect x="72" y="110" width="76" height="4" rx="2" fill="#7eb8bc" opacity="0.8"/>
+    <rect x="72" y="122" width="56" height="4" rx="2" fill="#7eb8bc" opacity="0.5"/>
+    <rect x="72" y="134" width="64" height="4" rx="2" fill="#7eb8bc" opacity="0.35"/>
+  </g>
+
+  <!-- CARD 4: Halftone (hero, center) -->
+  <g transform="translate(490, 292) rotate(2 110 140)" filter="url(#shadow)">
+    <rect width="220" height="280" rx="16" fill="url(#heroCard)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.18)"/>
+    <g transform="translate(20, 18) scale(0.55)">
+      <path fill="#ffffff" d="M7.25 16.0996C8.47968 16.1917 9.41168 16.3691 10.2373 16.7109C12.5242 17.6582 14.3418 19.4758 15.2891 21.7627C15.6308 22.5881 15.8073 23.5199 15.8994 24.749C15.8544 25.0446 15.7917 25.2975 15.6953 25.5303C15.2893 26.5104 14.5104 27.2893 13.5303 27.6953C12.7952 27.9997 11.8635 28 10 28C8.1365 28 7.20476 27.9997 6.46973 27.6953C5.48961 27.2893 4.71066 26.5104 4.30469 25.5303C4.00034 24.7952 4 23.8635 4 22C4 20.1365 4.00034 19.2048 4.30469 18.4697C4.71066 17.4896 5.48961 16.7107 6.46973 16.3047C6.70228 16.2084 6.95476 16.1446 7.25 16.0996Z"/>
+      <path fill="#ffffff" d="M24.749 16.0996C25.0447 16.1446 25.2975 16.2083 25.5303 16.3047C26.5104 16.7107 27.2893 17.4896 27.6953 18.4697C27.9997 19.2048 28 20.1365 28 22C28 23.8635 27.9997 24.7952 27.6953 25.5303C27.2893 26.5104 26.5104 27.2893 25.5303 27.6953C24.7952 27.9997 23.8635 28 22 28C20.1365 28 19.2048 27.9997 18.4697 27.6953C17.4896 27.2893 16.7107 26.5104 16.3047 25.5303C16.2083 25.2975 16.1446 25.0447 16.0996 24.749C16.1918 23.5198 16.3692 22.5881 16.7109 21.7627C17.6582 19.4758 19.4758 17.6582 21.7627 16.7109C22.5881 16.3692 23.5198 16.1918 24.749 16.0996Z"/>
+      <path fill="#ffffff" d="M10 4C11.8635 4 12.7952 4.00034 13.5303 4.30469C14.5104 4.71066 15.2893 5.48961 15.6953 6.46973C15.7916 6.70224 15.8544 6.95483 15.8994 7.25C15.8073 8.47965 15.6309 9.4117 15.2891 10.2373C14.3418 12.5242 12.5242 14.3418 10.2373 15.2891C9.4117 15.6309 8.47965 15.8073 7.25 15.8994C6.95483 15.8544 6.70224 15.7916 6.46973 15.6953C5.48961 15.2893 4.71066 14.5104 4.30469 13.5303C4.00034 12.7952 4 11.8635 4 10C4 8.1365 4.00034 7.20476 4.30469 6.46973C4.71066 5.48961 5.48961 4.71066 6.46973 4.30469C7.20476 4.00034 8.1365 4 10 4Z"/>
+      <path fill="#ffffff" d="M22 4C23.8635 4 24.7952 4.00034 25.5303 4.30469C26.5104 4.71066 27.2893 5.48961 27.6953 6.46973C27.9997 7.20476 28 8.1365 28 10C28 11.8635 27.9997 12.7952 27.6953 13.5303C27.2893 14.5104 26.5104 15.2893 25.5303 15.6953C25.2975 15.7917 25.0446 15.8544 24.749 15.8994C23.5199 15.8073 22.5881 15.6308 21.7627 15.2891C19.4758 14.3418 17.6582 12.5242 16.7109 10.2373C16.3691 9.41168 16.1917 8.47968 16.0996 7.25C16.1446 6.95476 16.2084 6.70228 16.3047 6.46973C16.7107 5.48961 17.4896 4.71066 18.4697 4.30469C19.2048 4.00034 20.1365 4 22 4Z"/>
+    </g>
+    <text x="56" y="32" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">Halftone &amp; Dots</text>
+    <rect x="18" y="54" width="184" height="206" rx="10" fill="rgba(0,0,0,0.22)"/>
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="48" cy="88" r="5"/><circle cx="72" cy="88" r="8"/><circle cx="96" cy="88" r="11"/><circle cx="120" cy="88" r="14"/><circle cx="144" cy="88" r="10"/><circle cx="168" cy="88" r="6"/>
+      <circle cx="48" cy="112" r="6"/><circle cx="72" cy="112" r="9"/><circle cx="96" cy="112" r="13"/><circle cx="120" cy="112" r="16"/><circle cx="144" cy="112" r="11"/><circle cx="168" cy="112" r="7"/>
+      <circle cx="48" cy="136" r="7"/><circle cx="72" cy="136" r="10"/><circle cx="96" cy="136" r="14"/><circle cx="120" cy="136" r="18"/><circle cx="144" cy="136" r="12"/><circle cx="168" cy="136" r="8"/>
+      <circle cx="48" cy="160" r="8"/><circle cx="72" cy="160" r="11"/><circle cx="96" cy="160" r="15"/><circle cx="120" cy="160" r="20"/><circle cx="144" cy="160" r="13"/><circle cx="168" cy="160" r="9"/>
+      <circle cx="48" cy="184" r="7"/><circle cx="72" cy="184" r="10"/><circle cx="96" cy="184" r="13"/><circle cx="120" cy="184" r="16"/><circle cx="144" cy="184" r="11"/><circle cx="168" cy="184" r="7"/>
+      <circle cx="48" cy="208" r="5"/><circle cx="72" cy="208" r="8"/><circle cx="96" cy="208" r="11"/><circle cx="120" cy="208" r="14"/><circle cx="144" cy="208" r="9"/><circle cx="168" cy="208" r="6"/>
+      <circle cx="48" cy="232" r="4"/><circle cx="72" cy="232" r="6"/><circle cx="96" cy="232" r="9"/><circle cx="120" cy="232" r="12"/><circle cx="144" cy="232" r="8"/><circle cx="168" cy="232" r="5"/>
+    </g>
+  </g>
+
+  <!-- CARD 5: ASCII Art -->
+  <g transform="translate(662, 310) rotate(8 110 140)" filter="url(#softShadow)">
+    <rect width="220" height="280" rx="16" fill="#111111" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="28" cy="28" r="5" fill="#7eb8bc"/>
+    <text x="42" y="32" fill="#e5e7eb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">ASCII Art</text>
+    <rect x="18" y="54" width="184" height="206" rx="10" fill="#050505"/>
+    <text x="26" y="78" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">@#%&amp;*+=-:. </text>
+    <text x="26" y="94" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">#%&amp;*+=-:.  </text>
+    <text x="26" y="110" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">%&amp;*+=-:.   </text>
+    <text x="26" y="126" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">&amp;*+=-:.    </text>
+    <text x="26" y="142" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">*+=-:.     </text>
+    <text x="26" y="158" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">+=-:.      </text>
+    <text x="26" y="174" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">=-:.       </text>
+    <text x="26" y="190" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">-:.        </text>
+    <text x="26" y="206" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">:.         </text>
+    <text x="26" y="222" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">.          </text>
+    <text x="26" y="238" fill="#7eb8bc" font-family="ui-monospace, monospace" font-size="9">           </text>
+  </g>
+
+  <!-- CARD 6: Dither & Generative -->
+  <g transform="translate(832, 298) rotate(14 110 140)" filter="url(#softShadow)">
+    <rect width="220" height="280" rx="16" fill="url(#purpleCard)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="14" y="14" width="192" height="28" rx="8" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="28" cy="28" r="5" fill="#ffffff"/>
+    <text x="42" y="32" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">Dither &amp; FX</text>
+    <rect x="18" y="54" width="184" height="206" rx="10" fill="rgba(0,0,0,0.2)"/>
+    <path d="M40 220 C70 160, 90 200, 120 130 S170 170, 190 90" fill="none" stroke="#f0abfc" stroke-width="16" stroke-linecap="round" opacity="0.85"/>
+    <path d="M50 220 C80 170, 100 210, 130 150 S180 180, 185 110" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="145" cy="115" r="22" fill="#c4b5fd" opacity="0.8"/>
+    <circle cx="95" cy="175" r="14" fill="#fda4af" opacity="0.75"/>
+  </g>
+
+  <!-- Brand watermark -->
+  <text x="600" y="612" text-anchor="middle" fill="rgba(255,255,255,0.22)" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="2">RYNIX STUDIO</text>
+</svg>
