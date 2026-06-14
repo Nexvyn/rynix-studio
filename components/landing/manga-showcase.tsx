@@ -103,7 +103,7 @@ export function MangaShowcase() {
                       />
                     )}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    {/* <img
                       src={panel.image}
                       alt=""
                       className="absolute object-cover pointer-events-none select-none max-w-none w-full h-full"
@@ -115,7 +115,7 @@ export function MangaShowcase() {
                         transform: "translate(-50%, -50%)",
                         filter: panel.filter,
                       }}
-                    />
+                    /> */}
                   </div>
                 </div>
               );

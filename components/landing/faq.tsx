@@ -41,7 +41,6 @@ const faqs = [
 export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [activeImage, setActiveImage] = useState(0);
-
   return (
     <section className="w-full py-24 bg-background">
       {/* Two-column container */}

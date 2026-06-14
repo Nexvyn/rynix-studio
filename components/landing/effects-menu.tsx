@@ -155,8 +155,8 @@ export function EffectsMenu() {
                       key={effect.name}
                       href={effect.href}
                       className={`group flex flex-col gap-2.5 p-6 transition-colors hover:bg-neutral-50/80 dark:hover:bg-neutral-800/40 border-solid border-neutral-200/60 dark:border-neutral-800/60 ${
-                        i % 2 === 0 ? "border-r-[0.5px]" : ""
-                      } ${i < 2 ? "border-b-[0.5px]" : ""}`}
+                        i % 2 === 0 ? "border-r" : ""
+                      } ${i < 2 ? "border-b" : ""}`}
                     >
                       <EffectPreview name={effect.name} />
                       <div>
@@ -170,7 +170,7 @@ export function EffectsMenu() {
             </div>
 
             {pageCount > 1 && (
-              <div className="flex items-center justify-between border-t-[0.5px] border-solid border-neutral-200/60 dark:border-neutral-800/60 px-6 py-4">
+              <div className="flex items-center justify-between border-t border-solid border-neutral-200/60 dark:border-neutral-800/60 px-6 py-4">
                 <button
                   type="button"
                   aria-label="Previous page"
