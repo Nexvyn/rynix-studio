@@ -9,9 +9,11 @@ import { Hero } from "@/components/landing/hero";
 import { Faq } from "@/components/landing/faq";
 import { Pricing } from "@/components/landing/pricing";
 import { FinalCta } from "@/components/landing/final-cta";
-import { Footer } from "@/components/ui/footer";
+import { Footer } from "@/components/landing/footer";
 import { GradientBlur } from "@/components/ui/gradient-blur";
 import { MangaShowcase } from "@/components/landing/manga-showcase";
+import { FeatureEffects } from "@/components/landing/feature-effects";
+import { BlocksReveal } from "@/components/landing/blocks-reveal";
 // import { BotanicalEffects } from "@/components/landing/botanical-effects";
 
 export function LandingPage() {
@@ -22,7 +24,9 @@ export function LandingPage() {
         <Nav />
         <Hero />
         <MangaShowcase />
-        {/* // <BotanicalEffects /> */} 
+        {/* // <BotanicalEffects /> */}
+        <FeatureEffects />
+        <BlocksReveal />
         <Faq />
         <Pricing />
         <FinalCta />
