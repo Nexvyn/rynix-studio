@@ -1,0 +1,6 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="currentColor" stroke-width="24" stroke-linecap="round" fill="none">
+    <path d="M40 90 C 180 -10, 360 80, 300 200 C 250 300, 60 270, 120 380 C 165 460, 360 430, 380 320" />
+    <path d="M30 300 C 100 250, 130 320, 90 360 C 60 390, 30 360, 60 330" />
+  </g>
+</svg>
