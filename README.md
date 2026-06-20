@@ -1,25 +1,27 @@
-# Rynix Studio
+<p align="center">
+  <img src="public/favicon.svg" width="72" height="72" alt="Rynix Studio" />
+</p>
 
-Creative media effects that run entirely in your browser — halftone, ASCII art, dithering, dot grids, and 30+ more algorithms. No upload, no server, fully on-device.
+<h1 align="center">Rynix Studio</h1>
 
-## Getting started
+<p align="center">
+  Real-time creative effects for images, video, and camera — entirely in your browser.
+</p>
 
-```bash
-bun install
-bun dev
-```
+<p align="center">
+  <a href="https://rynix.studio">rynix.studio</a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000).
+---
 
-## Scripts
+**Rynix Studio** is a browser-based creative tool for turning photos, videos, and live camera feeds into stylized visuals. Apply halftone, ASCII art, dithering, dot grids, and 30+ more effects — with no upload and no server. Everything runs on your device.
 
-| Command | Description |
-|---------|-------------|
-| `bun dev` | Start development server |
-| `bun build` | Production build |
-| `bun start` | Start production server |
-| `bun lint` | Run ESLint |
+### What you can do
 
-## License
+- **Process any media** — images, video, and webcam, locally in the browser
+- **Choose from 30+ effects** — ASCII, halftone, dithering, dot grids, shaders, and more
+- **Stay private** — your files never leave your device
+- **Export your work** — save results directly to your machine
+- **Work offline** — once loaded, the editor runs without a connection
 
-Copyright © Nexvyn. All rights reserved.
+Built for creators who want fast, on-device visual effects without sending media to a server.
