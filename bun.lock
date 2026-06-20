@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "rynix-studio-public",
+      "name": "rynix-studio",
       "dependencies": {
         "@phosphor-icons/react": "^2.1.10",
         "@vercel/analytics": "^2.0.1",
