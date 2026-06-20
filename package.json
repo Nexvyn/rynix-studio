@@ -1,6 +1,7 @@
 {
   "name": "rynix-studio",
   "version": "0.1.0",
+  "description": "Real-time creative effects for images, video, and camera — entirely in your browser. 30+ on-device algorithms. No upload required.",
   "private": false,
   "scripts": {
     "dev": "next dev",
