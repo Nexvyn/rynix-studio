@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { Borel, Playwrite_TZ } from "next/font/google";
-import { Agentation } from "agentation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ServiceWorkerRegister } from "./sw-register";
 import { PageTransitionProvider } from "@/components/ui/page-transition";
 import { GlimmProvider, InterceptLinks } from "glimm/next";
 import "./globals.css";
@@ -108,10 +106,8 @@ export default function RootLayout({
             </PageTransitionProvider>
           </GlimmProvider>
         </ThemeProvider>
-        <ServiceWorkerRegister />
         <Analytics />
         <SpeedInsights />
-        {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
   );

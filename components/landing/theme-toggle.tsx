@@ -3,8 +3,8 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Moon, Sun } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
-import { I } from "@/app/edit/lib/icons";
 
 const SPRING_PRESS = { type: "spring" as const, stiffness: 620, damping: 20 };
 
@@ -64,7 +64,7 @@ export function ThemeToggle({ className }: { className?: string }) {
             lineHeight: 0,
           }}
         >
-          {isDark ? <I.Sun s={16} /> : <I.Moon s={16} />}
+          {isDark ? <Sun size={16} weight="bold" /> : <Moon size={16} weight="bold" />}
         </motion.span>
       </AnimatePresence>
     </motion.button>

@@ -13,7 +13,7 @@ const sections: { heading: string; body: React.ReactNode }[] = [
   },
   {
     heading: "What we collect",
-    body: "Standard server logs may capture your IP address, browser type, and pages accessed when you visit the site. If you submit feedback via the in-app form, your message is sent to a private webhook — no personal data is attached unless you include it yourself. That's it.",
+    body: "Standard server logs may capture your IP address, browser type, and pages accessed when you visit the site. That's it.",
   },
   {
     heading: "Your media stays on your device",
