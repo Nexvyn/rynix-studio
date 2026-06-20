@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://rynix.studio">rynix.studio</a>
+  <a href="https://studio.rynix.in">studio.rynix.in</a>
 </p>
 
 ---
