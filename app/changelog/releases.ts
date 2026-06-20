@@ -16,7 +16,7 @@ export const RELEASES: Release[] = [
   {
     version: "0.5.0",
     date: "2026-06-16",
-    summary: "Landing page polish and new sections.",
+    summary: "Site polish and new sections.",
     changes: [
       { kind: "Added", text: "Blocks-reveal section with scroll-driven animation." },
       { kind: "Added", text: "Floral and squiggle pattern assets." },
@@ -27,7 +27,7 @@ export const RELEASES: Release[] = [
   {
     version: "0.4.0",
     date: "2026-06-10",
-    summary: "Landing redesign and legal pages.",
+    summary: "Site redesign and legal pages.",
     changes: [
       { kind: "Added", text: "Terms, privacy, and pricing pages." },
       { kind: "Added", text: "Manga showcase and feature-effects sections." },
@@ -38,7 +38,7 @@ export const RELEASES: Release[] = [
   {
     version: "0.3.0",
     date: "2026-05-19",
-    summary: "Initial landing page launch.",
+    summary: "Initial public launch.",
     changes: [
       { kind: "Added", text: "Hero, nav, FAQ, pricing, and footer sections." },
       { kind: "Added", text: "Theme toggle and page transitions." },
